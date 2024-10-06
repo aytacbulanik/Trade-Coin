@@ -71,10 +71,10 @@
                                     <constraint firstAttribute="height" constant="80" id="zSn-xP-UET"/>
                                 </constraints>
                             </view>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDH-V3-j2e">
-                                <rect key="frame" x="10" y="618" width="373" height="200"/>
+                            <pickerView contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDH-V3-j2e">
+                                <rect key="frame" x="10" y="518" width="373" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="y0M-CN-x8d"/>
+                                    <constraint firstAttribute="height" constant="300" id="y0M-CN-x8d"/>
                                 </constraints>
                             </pickerView>
                         </subviews>
@@ -105,7 +105,7 @@
     <resources>
         <image name="bitcoinsign.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
