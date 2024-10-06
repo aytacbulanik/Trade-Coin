@@ -20,7 +20,13 @@ class ViewController: UIViewController {
         pickerView.delegate = self
         containerView.layer.cornerRadius = 40
     }
-
+    
+    
+    @IBAction func coinChoseePressed(_ sender: UIButton) {
+        
+        print(sender.tag)
+    }
+    
 
 }
 

@@ -89,18 +89,23 @@
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Jy-uz-Xhq">
-                                                <rect key="frame" x="30.333333333333329" y="0.0" width="24" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="80"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="coinChoseePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbR-Ub-6uG"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="5Jy-uz-Xhq" firstAttribute="centerY" secondItem="d6Y-fo-XKh" secondAttribute="centerY" id="4hm-Ni-ncO"/>
                                             <constraint firstItem="ziE-Qz-dvl" firstAttribute="centerY" secondItem="d6Y-fo-XKh" secondAttribute="centerY" id="55q-Ax-Omi"/>
                                             <constraint firstAttribute="height" constant="80" id="7E8-KC-YOJ"/>
+                                            <constraint firstItem="5Jy-uz-Xhq" firstAttribute="leading" secondItem="d6Y-fo-XKh" secondAttribute="leading" id="FEx-Fs-0iI"/>
                                             <constraint firstAttribute="bottom" secondItem="5Jy-uz-Xhq" secondAttribute="bottom" id="JPC-s8-eLj"/>
                                             <constraint firstItem="ziE-Qz-dvl" firstAttribute="top" secondItem="d6Y-fo-XKh" secondAttribute="top" id="LqR-zk-WQy"/>
                                             <constraint firstItem="5Jy-uz-Xhq" firstAttribute="top" secondItem="d6Y-fo-XKh" secondAttribute="top" id="NQb-y1-T5P"/>
+                                            <constraint firstAttribute="trailing" secondItem="5Jy-uz-Xhq" secondAttribute="trailing" id="Pgu-7d-8sO"/>
                                             <constraint firstItem="ziE-Qz-dvl" firstAttribute="centerX" secondItem="d6Y-fo-XKh" secondAttribute="centerX" id="WcP-ef-YwX"/>
                                             <constraint firstItem="5Jy-uz-Xhq" firstAttribute="centerX" secondItem="d6Y-fo-XKh" secondAttribute="centerX" id="XbV-xH-ySK"/>
                                             <constraint firstItem="ziE-Qz-dvl" firstAttribute="leading" secondItem="d6Y-fo-XKh" secondAttribute="leading" id="atm-Ag-JDa"/>
@@ -115,10 +120,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="80"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tm-CE-0Ty">
-                                                <rect key="frame" x="30.333333333333329" y="0.0" width="24" height="80"/>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tm-CE-0Ty">
+                                                <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="80"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="coinChoseePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o7W-XJ-818"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.35834542380000001" green="0.67148299869999994" blue="0.75229536770000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -130,6 +138,8 @@
                                             <constraint firstAttribute="bottom" secondItem="4fb-am-2Lc" secondAttribute="bottom" id="hUx-Sh-YRE"/>
                                             <constraint firstItem="2tm-CE-0Ty" firstAttribute="centerX" secondItem="tXc-TV-s1c" secondAttribute="centerX" id="hiB-2n-BNZ"/>
                                             <constraint firstItem="4fb-am-2Lc" firstAttribute="centerY" secondItem="tXc-TV-s1c" secondAttribute="centerY" id="nGf-NM-AOh"/>
+                                            <constraint firstAttribute="trailing" secondItem="2tm-CE-0Ty" secondAttribute="trailing" id="qJH-H5-eNI"/>
+                                            <constraint firstItem="2tm-CE-0Ty" firstAttribute="leading" secondItem="tXc-TV-s1c" secondAttribute="leading" id="w53-Of-rlo"/>
                                             <constraint firstAttribute="trailing" secondItem="4fb-am-2Lc" secondAttribute="trailing" id="wIs-wm-Kki"/>
                                             <constraint firstAttribute="bottom" secondItem="2tm-CE-0Ty" secondAttribute="bottom" id="xbO-x1-NUS"/>
                                             <constraint firstItem="2tm-CE-0Ty" firstAttribute="centerY" secondItem="tXc-TV-s1c" secondAttribute="centerY" id="zRe-bh-VSL"/>
@@ -142,19 +152,24 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="80"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sj-vP-bhb">
-                                                <rect key="frame" x="30.333333333333343" y="0.0" width="24" height="80"/>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sj-vP-bhb">
+                                                <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="80"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="coinChoseePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u36-cW-SBQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.35834542380000001" green="0.67148299869999994" blue="0.75229536770000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="4Iv-qc-B1o" firstAttribute="centerY" secondItem="d5g-gH-KB3" secondAttribute="centerY" id="B2S-yf-AcI"/>
+                                            <constraint firstAttribute="trailing" secondItem="3sj-vP-bhb" secondAttribute="trailing" id="JjI-1e-Grj"/>
                                             <constraint firstItem="4Iv-qc-B1o" firstAttribute="leading" secondItem="d5g-gH-KB3" secondAttribute="leading" id="SA3-2F-PLq"/>
                                             <constraint firstAttribute="trailing" secondItem="4Iv-qc-B1o" secondAttribute="trailing" id="WEk-Pm-OZ1"/>
                                             <constraint firstItem="3sj-vP-bhb" firstAttribute="centerX" secondItem="d5g-gH-KB3" secondAttribute="centerX" id="Wnm-gV-rLz"/>
                                             <constraint firstAttribute="bottom" secondItem="3sj-vP-bhb" secondAttribute="bottom" id="bYj-zc-351"/>
+                                            <constraint firstItem="3sj-vP-bhb" firstAttribute="leading" secondItem="d5g-gH-KB3" secondAttribute="leading" id="cnD-3u-e6l"/>
                                             <constraint firstItem="4Iv-qc-B1o" firstAttribute="centerX" secondItem="d5g-gH-KB3" secondAttribute="centerX" id="f2E-if-Euc"/>
                                             <constraint firstAttribute="bottom" secondItem="4Iv-qc-B1o" secondAttribute="bottom" id="g44-rk-p2X"/>
                                             <constraint firstItem="3sj-vP-bhb" firstAttribute="top" secondItem="d5g-gH-KB3" secondAttribute="top" id="jjh-r0-qZm"/>
@@ -169,10 +184,13 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="80"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="395-rr-Ftq">
-                                                <rect key="frame" x="30.333333333333314" y="0.0" width="24" height="80"/>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="395-rr-Ftq">
+                                                <rect key="frame" x="0.0" y="0.0" width="84.666666666666671" height="80"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="coinChoseePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VV6-t4-dKZ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.35834542380000001" green="0.67148299869999994" blue="0.75229536770000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -184,8 +202,10 @@
                                             <constraint firstItem="395-rr-Ftq" firstAttribute="centerX" secondItem="YfM-Iq-GL3" secondAttribute="centerX" id="HTd-LY-Jlh"/>
                                             <constraint firstItem="ANs-OG-0UR" firstAttribute="top" secondItem="YfM-Iq-GL3" secondAttribute="top" id="POP-T3-wJS"/>
                                             <constraint firstItem="395-rr-Ftq" firstAttribute="centerY" secondItem="YfM-Iq-GL3" secondAttribute="centerY" id="Q2F-1P-X38"/>
+                                            <constraint firstAttribute="trailing" secondItem="395-rr-Ftq" secondAttribute="trailing" id="ZqP-q5-KGA"/>
                                             <constraint firstAttribute="bottom" secondItem="ANs-OG-0UR" secondAttribute="bottom" id="bB6-88-2Ai"/>
                                             <constraint firstAttribute="trailing" secondItem="ANs-OG-0UR" secondAttribute="trailing" id="bw1-Db-AA3"/>
+                                            <constraint firstItem="395-rr-Ftq" firstAttribute="leading" secondItem="YfM-Iq-GL3" secondAttribute="leading" id="cWK-Bh-Aal"/>
                                             <constraint firstItem="ANs-OG-0UR" firstAttribute="centerY" secondItem="YfM-Iq-GL3" secondAttribute="centerY" id="zfO-NC-jo2"/>
                                         </constraints>
                                     </view>
