@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var pickerView: UIPickerView!
     
     var coinManager = CoinManager()
+    var coinName : String = ""
+    var coins = ["BTC","ETH","BNB","XRP"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,16 +30,22 @@ class ViewController: UIViewController {
     
     @IBAction func coinChoseePressed(_ sender: UIButton) {
         updateUI(sender.tag)
-        //coinManager.choseeCoin(coin: "BTC")
+        
     }
     
     func updateUI(_ tag : Int) {
         switch tag {
-        case 0: coinIconImageView.image = UIImage(systemName: "bitcoinsign.circle.fill")
+        case 0:
+            coinIconImageView.image = UIImage(systemName: "bitcoinsign.circle.fill")
+            coinName = coins[0]
         case 1: coinIconImageView.image = UIImage(named: "etherium")
+            coinName = coins[1]
         case 2: coinIconImageView.image = UIImage(named: "binance")
+            coinName = coins[2]
         case 3: coinIconImageView.image = UIImage(named: "xrp")
+            coinName = coins[3]
         default :  coinIconImageView.image = UIImage(named: "bitcoinsign.circle.fill")
+            coinName = coins[0]
         }
     }
     
@@ -58,7 +66,9 @@ extension ViewController : UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        moneyNameLabel.text = "\(coinManager.currencyArray[row])"
+        let currentMoneyCost = coinManager.currencyArray[row]
+        coinManager.choseeCoin(coin: coinName, money: currentMoneyCost)
+        moneyNameLabel.text = "\(currentMoneyCost)"
     }
 }
 

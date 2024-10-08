@@ -15,8 +15,8 @@ struct CoinManager {
     
     let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
     
-    func choseeCoin(coin : String) {
-        let urlString = "\(baseURL)\(coin)?\(apiKey)"
+    func choseeCoin(coin : String , money : String) {
+        let urlString = "\(baseURL)\(coin)/\(money)?\(apiKey)"
         fetchCoinData(urlString)
     }
     
