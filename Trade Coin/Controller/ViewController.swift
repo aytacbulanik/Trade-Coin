@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var monetCostLabel: UILabel!
     @IBOutlet weak var moneyNameLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var coinIconImageView: UIImageView!
     @IBOutlet weak var pickerView: UIPickerView!
     
     var coinManager = CoinManager()
@@ -26,8 +27,18 @@ class ViewController: UIViewController {
     
     
     @IBAction func coinChoseePressed(_ sender: UIButton) {
-        
-        coinManager.choseeCoin(coin: "BTC")
+        updateUI(sender.tag)
+        //coinManager.choseeCoin(coin: "BTC")
+    }
+    
+    func updateUI(_ tag : Int) {
+        switch tag {
+        case 0: coinIconImageView.image = UIImage(systemName: "bitcoinsign.circle.fill")
+        case 1: coinIconImageView.image = UIImage(named: "etherium")
+        case 2: coinIconImageView.image = UIImage(named: "binance")
+        case 3: coinIconImageView.image = UIImage(named: "xrp")
+        default :  coinIconImageView.image = UIImage(named: "bitcoinsign.circle.fill")
+        }
     }
     
 

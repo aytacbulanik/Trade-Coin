@@ -230,6 +230,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="coinIconImageView" destination="X1z-bX-Rbn" id="ex7-98-GHD"/>
                         <outlet property="containerView" destination="ihI-WE-jZ7" id="Rwi-DQ-vgT"/>
                         <outlet property="monetCostLabel" destination="p2u-kv-6gK" id="laA-Aa-JfY"/>
                         <outlet property="moneyNameLabel" destination="cSZ-zn-Up8" id="qY9-5j-KXL"/>
