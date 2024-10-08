@@ -7,9 +7,14 @@
 
 import Foundation
 
+protocol CoinManagerProtocol {
+    func sendCoinModel(_ model : CoinModel)
+    func sendError(_ error : Error)
+}
+
 struct CoinManager {
     
-    
+    var delegate : CoinManagerProtocol?
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/"
     let apiKey = "apikey=471526db-f78c-43ba-bc8a-1f6dd6a7a448&invert=true"
     
@@ -27,13 +32,13 @@ struct CoinManager {
         let task = session.dataTask(with: url) { data, response , error in
             
             if let error {
-                print(error.localizedDescription)
+                delegate?.sendError(error)
                 return
             }
             
             guard let data else { return }
             guard let  coinData = self.decoderJSON(data) else { return }
-            print(coinData)
+            delegate?.sendCoinModel(coinData)
         }
         task.resume()
     }
@@ -44,7 +49,7 @@ struct CoinManager {
             let coinData = try decoder.decode(CoinModel.self, from: data)
             return coinData
         } catch {
-            print(error.localizedDescription)
+            delegate?.sendError(error)
             return nil
         }
     }

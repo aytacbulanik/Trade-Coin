@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
+        coinManager.delegate = self
         containerView.layer.cornerRadius = 40
         moneyNameLabel.text = "AUD"
     }
@@ -70,5 +71,17 @@ extension ViewController : UIPickerViewDelegate, UIPickerViewDataSource {
         coinManager.choseeCoin(coin: coinName, money: currentMoneyCost)
         moneyNameLabel.text = "\(currentMoneyCost)"
     }
+}
+
+extension ViewController : CoinManagerProtocol {
+    func sendCoinModel(_ model: CoinModel) {
+        print(model.rate)
+    }
+    
+    func sendError(_ error: any Error) {
+        print(error)
+    }
+    
+    
 }
 
