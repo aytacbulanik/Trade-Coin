@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var pickerView: UIPickerView!
     
+    var coinManager = CoinManager()
     var testPicker = ["1", "2", "33333333333", "4", "55555", "666", "7", "8", "9999999", "10"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class ViewController: UIViewController {
     
     @IBAction func coinChoseePressed(_ sender: UIButton) {
         
-        print(sender.tag)
+        coinManager.choseeCoin(coin: "BTC")
     }
     
 

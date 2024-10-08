@@ -30,17 +30,20 @@ struct CoinManager {
             }
             
             guard let data else { return }
-            var coinData = self.decoderJSON(data)
+            guard let  coinData = self.decoderJSON(data) else { return }
             print(coinData)
         }
+        task.resume()
     }
     
-    func decoderJSON(_ data : Data) {
+    func decoderJSON(_ data : Data) -> CoinModel? {
         let decoder = JSONDecoder()
         do {
             let coinData = try decoder.decode(CoinModel.self, from: data)
+            return coinData
         } catch {
             print(error.localizedDescription)
+            return nil
         }
     }
 }
