@@ -13,6 +13,8 @@ struct CoinManager {
     let baseURL = "https://rest.coinapi.io/v1/exchangerate/"
     let apiKey = "apikey=471526db-f78c-43ba-bc8a-1f6dd6a7a448&invert=true"
     
+    let currencyArray = ["AUD", "BRL","CAD","CNY","EUR","GBP","HKD","IDR","ILS","INR","JPY","MXN","NOK","NZD","PLN","RON","RUB","SEK","SGD","USD","ZAR"]
+    
     func choseeCoin(coin : String) {
         let urlString = "\(baseURL)\(coin)?\(apiKey)"
         fetchCoinData(urlString)

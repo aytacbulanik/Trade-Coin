@@ -15,11 +15,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var pickerView: UIPickerView!
     
     var coinManager = CoinManager()
-    var testPicker = ["1", "2", "33333333333", "4", "55555", "666", "7", "8", "9999999", "10"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.delegate = self
+        pickerView.dataSource = self
         containerView.layer.cornerRadius = 40
+        moneyNameLabel.text = "AUD"
     }
     
     
@@ -37,15 +39,15 @@ extension ViewController : UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        testPicker.count
+        coinManager.currencyArray.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return testPicker[row]
+        return coinManager.currencyArray[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        monetCostLabel.text = "\(testPicker[row])"
+        moneyNameLabel.text = "\(coinManager.currencyArray[row])"
     }
 }
 
