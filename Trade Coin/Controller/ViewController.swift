@@ -75,7 +75,9 @@ extension ViewController : UIPickerViewDelegate, UIPickerViewDataSource {
 
 extension ViewController : CoinManagerProtocol {
     func sendCoinModel(_ model: CoinModel) {
-        print(model.rate)
+        DispatchQueue.main.async {
+            self.monetCostLabel.text = String(format: "%.2f",model.rate)
+        }
     }
     
     func sendError(_ error: any Error) {
