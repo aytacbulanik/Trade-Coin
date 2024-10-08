@@ -15,10 +15,32 @@ struct CoinManager {
     
     func choseeCoin(coin : String) {
         let urlString = "\(baseURL)\(coin)?\(apiKey)"
+        fetchCoinData(urlString)
     }
     
     
-    func FetchCoinData() {
-        
+    func fetchCoinData(_ urlString : String) {
+        guard let url = URL(string: urlString) else { return }
+        let session = URLSession(configuration: .default)
+        let task = session.dataTask(with: url) { data, response , error in
+            
+            if let error {
+                print(error.localizedDescription)
+                return
+            }
+            
+            guard let data else { return }
+            var coinData = self.decoderJSON(data)
+            print(coinData)
+        }
+    }
+    
+    func decoderJSON(_ data : Data) {
+        let decoder = JSONDecoder()
+        do {
+            let coinData = try decoder.decode(CoinModel.self, from: data)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
